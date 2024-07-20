@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /politica-de-privacidade.html
