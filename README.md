@@ -1,2 +1,7 @@
-# website-linkedin-sync
-"Website LinkedIn Sync" is a project aimed at seamlessly replicating LinkedIn profile data onto a personal website.
+# WebSite LinkedIn Sync 🌐
+
+Este projeto tem como objetivo automatizar a importação de dados do LinkedIn para um site pessoal através da API do LinkedIn.
+
+⚠️ **Nota:** Este projeto está em fase de homologação para utilizar a API do LinkedIn.
+
+![Screenshot](https://github.com/RafaelCecchin/website-linkedin-sync/blob/master/img/screenshot.png?raw=true)
