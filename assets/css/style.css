@@ -1,0 +1,113 @@
+:root {
+    --font-Archivo: 'Archivo';
+    --font-DM: 'DM Serif Display';
+    
+    --white: #F9FAFC;
+    --black: #0C0C0C;
+    --light-gray: #777D81;
+    --blue: #3A82F1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--font-Archivo), sans-serif;
+    font-size: 16px;
+    color: var(--black);
+}
+
+    body {
+        padding: 2rem;
+        background-color: var(--white);
+    }
+
+        .title {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            justify-content: left;
+            gap: 2rem 1rem;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 58rem;
+            margin: auto;
+            margin-top: 2rem;
+        }
+
+            h3 {
+                font-family: var(--font-DM), serif;
+                font-style: italic;
+                font-weight: 100;
+                margin-top: .3rem;
+                color: var(--light-gray);
+            }
+
+            .data {
+                font-weight: 500;
+            }
+
+                .btn {
+                    text-decoration: none;
+                    color: var(--white);
+                    background-color: var(--blue);
+                    padding: .5rem 1rem;
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    gap: .5rem;
+                }
+
+                    svg {
+                        width: 1rem;
+                        height: auto;
+                    }
+
+                        path {
+                            fill: var(--white);
+                        }
+
+                h4 {
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin-bottom: 1rem;
+                    line-height: 1.2;
+                }
+
+                    a {
+                        color: var(--blue);
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+
+                ul {
+                    list-style: none;
+                }
+
+                    li {
+                        margin-bottom: 1rem;
+                        line-height: 1.2;
+                    }
+
+            .links {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
