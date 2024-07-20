@@ -3,55 +3,219 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rafael Cecchin</title>
+        <title>Dev. Rafael Cecchin</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+        <style>
+
+            :root {
+                --font-Archivo: 'Archivo';
+                --font-DM: 'DM Serif Display';
+                
+                --white: #F9FAFC;
+                --black: #0C0C0C;
+                --light-gray: #777D81;
+                --blue: #3A82F1;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                font-family: var(--font-Archivo), sans-serif;
+                font-size: 16px;
+                color: var(--black);
+            }
+
+                body {
+                    padding: 2rem;
+                    background-color: var(--white);
+                }
+
+                    .title {
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+
+                    .subtitle {
+                        text-align: center;
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                    }
+
+                    .grid {
+                        display: grid;
+                        grid-template-columns: auto 1fr;
+                        align-items: start;
+                        justify-content: left;
+                        gap: 2rem 1rem;
+                        margin-top: 2rem;
+                        width: 100%;
+                        max-width: 58rem;
+                        margin: auto;
+                        margin-top: 2rem;
+                    }
+            
+                        h3 {
+                            font-family: var(--font-DM), serif;
+                            font-style: italic;
+                            font-weight: 100;
+                            margin-top: .3rem;
+                            color: var(--light-gray);
+                        }
+
+                        .data {
+                            font-weight: 500;
+                        }
+
+                            .btn {
+                                text-decoration: none;
+                                color: var(--white);
+                                background-color: var(--blue);
+                                padding: .5rem 1rem;
+                                border-radius: 1rem;
+                                display: flex;
+                                flex-direction: row;
+                                gap: .5rem;
+                            }
+
+                                svg {
+                                    width: 1rem;
+                                    height: auto;
+                                }
+
+                                    path {
+                                        fill: var(--white);
+                                    }
+
+                            h4 {
+                                font-weight: 700;
+                                margin-bottom: 1rem;
+                            }
+
+                            p {
+                                margin-bottom: 1rem;
+                                line-height: 1.2;
+                            }
+
+                                a {
+                                    color: var(--blue);
+                                    text-decoration: none;
+                                    cursor: pointer;
+                                }
+
+                            ul {
+                                list-style: none;
+                            }
+
+                                li {
+                                    margin-bottom: 1rem;
+                                    line-height: 1.2;
+                                }
+
+                        .links {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 1rem;
+                            flex-wrap: wrap;
+                        }
+        </style>
+
     </head>
     <body>
         
         <h1 class="title">Rafael Cecchin</h1>
         <h2 class="subtitle">Desenvolvedor de Software</h2>
 
-        <p class="description"></p>
-
         <div class="grid">
 
             <h3>Links</h3>
             <div class="data links">
-                <a href="https://www.linkedin.com/in/rafaelcecchin/">LinkedIn</a>
-                <a href="https://github.com/RafaelCecchin">GitHub</a>
+                <a class="btn" target="_blank" href="https://www.linkedin.com/in/rafaelcecchin/">
+                    <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- https://freeicons.io/user-interface-icons-4/linkedin-sign-icon-36731 -->
+                        <path d="M44.4145 2.58538C42.6914 0.8619 40.6154 0 38.1881 0H8.81293C6.38563 0 4.30966 0.8619 2.58586 2.58538C0.86238 4.30918 0.000480652 6.38504 0.000480652 8.81245V38.1873C0.000480652 40.6145 0.86238 42.6906 2.58586 44.4144C4.30966 46.1382 6.38563 47.0001 8.81293 47.0001H38.1878C40.6151 47.0001 42.6911 46.1382 44.4141 44.4144C46.1379 42.6906 46.9998 40.6146 46.9998 38.1873V8.81245C46.9997 6.38504 46.1378 4.30885 44.4145 2.58538ZM14.3206 39.35H7.25225V18.1143H14.3206V39.35ZM13.6784 14.1827C12.9442 14.8865 11.9751 15.2384 10.7714 15.2384H10.7406C9.57794 15.2384 8.6348 14.8865 7.91041 14.1827C7.18591 13.4788 6.82387 12.6069 6.82387 11.5665C6.82387 10.5058 7.19641 9.62847 7.94074 8.93473C8.6856 8.2412 9.64932 7.89428 10.8323 7.89428C12.0154 7.89428 12.964 8.2412 13.6781 8.93473C14.392 9.62847 14.7593 10.5058 14.7796 11.5665C14.7795 12.6064 14.4127 13.4784 13.6784 14.1827ZM39.7484 39.35H32.68V27.998C32.68 24.7957 31.4972 23.1941 29.1308 23.1941C28.2333 23.1941 27.4782 23.4439 26.8664 23.9438C26.2539 24.4434 25.7951 25.0503 25.4895 25.7648C25.3465 26.1316 25.2753 26.7026 25.2753 27.4776V39.3499H18.2069C18.2681 26.5394 18.2681 19.4605 18.2069 18.114H25.2753V21.1121C26.7615 18.7885 28.8719 17.6242 31.6094 17.6242C34.0573 17.6242 36.0261 18.4302 37.5152 20.0415C39.0044 21.6531 39.7488 24.0299 39.7488 27.1706V39.35H39.7484Z" fill="black"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a class="btn" target="_blank" href="https://github.com/RafaelCecchin">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- https://freeicons.io/common-style-icons-8/github-icon-11674 -->
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C15.523 0 20 4.58993 20 10.2529C20 14.7819 17.138 18.624 13.167 19.981C12.66 20.082 12.48 19.7618 12.48 19.4888C12.48 19.1508 12.492 18.0468 12.492 16.6748C12.492 15.7188 12.172 15.0949 11.813 14.7769C14.04 14.5229 16.38 13.6558 16.38 9.71777C16.38 8.59777 15.992 7.68382 15.35 6.96582C15.454 6.70682 15.797 5.66395 15.252 4.25195C15.252 4.25195 14.414 3.97722 12.505 5.30322C11.706 5.07622 10.85 4.96201 10 4.95801C9.15 4.96201 8.295 5.07622 7.497 5.30322C5.586 3.97722 4.746 4.25195 4.746 4.25195C4.203 5.66395 4.546 6.70682 4.649 6.96582C4.01 7.68382 3.619 8.59777 3.619 9.71777C3.619 13.6458 5.954 14.5262 8.175 14.7852C7.889 15.0412 7.63 15.4928 7.54 16.1558C6.97 16.4178 5.522 16.8712 4.63 15.3042C4.63 15.3042 4.101 14.3191 3.097 14.2471C3.097 14.2471 2.122 14.2341 3.029 14.8701C3.029 14.8701 3.684 15.1851 4.139 16.3701C4.139 16.3701 4.726 18.2001 7.508 17.5801C7.513 18.4371 7.522 19.2448 7.522 19.4888C7.522 19.7598 7.338 20.0769 6.839 19.9819C2.865 18.6269 0 14.7829 0 10.2529C0 4.58993 4.478 0 10 0Z" fill="black"/>
+                    </svg>    
+                    GitHub</a>
             </div>
 
             <h3>Sobre</h3>
             <div class="data about">
                 <p>Desenvolvedor de Software com formação em Tecnologia em Análise e Desenvolvimento de Sistemas pelo 
-                Instituto Federal do Paraná (IFPR). Com 4 anos de experiência na área, atualmente trabalho na RCM Cabos Elétricos, 
-                onde sou responsável pelo desenvolvimento do sistema de vendas e outros projetos internos. Recentemente, conclui cursos 
-                em Docker, Integração Contínua e Padrões Avançados com Git e GitHub, fortalecendo minhas habilidades em DevOps.</p>
+                <a target="_blank" href="https://ifpr.edu.br/uniao-da-vitoria/">Instituto Federal do Paraná (IFPR)</a>.</p> 
+                
+                <p>Com mais de 4 anos de experiência na área, atualmente trabalho na <a target="_blank" href="https://www.rcmcaboseletricos.com.br/">RCM Cabos Elétricos</a>, 
+                onde sou responsável pelo desenvolvimento do sistema de vendas com Laravel e outros projetos internos.</p> 
+
+                <p>Recentemente, conclui cursos em Docker, Integração Contínua e Padrões Avançados com 
+                Git e GitHub, fortalecendo minhas habilidades em DevOps.</p>
             </div>
 
             <h3>Trabalhos</h3>
             <div class="data work">
                 <ul>
-                    <li>Desenvolvedor de software - RCM Cabos Elétricos</li>
-                    <li>Programador Júnior - Girafa Comunicação Interativa</li>
-                    <li>Técnico de suporte - WLE Automação Comercial</li>
+                    <li>Desenvolvedor de Software - <a target="_blank" href="https://www.rcmcaboseletricos.com.br/">RCM Cabos Elétricos</a></li>
+                    <li>Programador Júnior - <a target="_blank" href="https://girafacomunicacao.com.br/">Girafa Comunicação Interativa</a></li>
+                    <li>Técnico de suporte - <a target="_blank" href="https://www.wlesoft.com.br/">WLE Automação Comercial</a></li>
                 </ul>
             </div>
 
             <h3>Formação</h3>
             <div class="data academic-education">
                 <ul>
-                    <li>Análise e Desenvolvimento de Sistemas - IFPR</li>
-                    <li>Técnico em Informática Integrado ao Ensino Médio - IFPR</li>
+                    <li>Análise e Desenvolvimento de Sistemas - <a target="_blank" href="https://ifpr.edu.br/uniao-da-vitoria/">IFPR</a></li>
+                    <li>Técnico em Informática Integrado ao Ensino Médio - <a target="_blank" href="https://ifpr.edu.br/uniao-da-vitoria/">IFPR</a></li>
                 </ul>
             </div>
 
             <h3>Certificados</h3>
             <div class="data certificates">
                 <ul>
-                    <li>Curso de Docker</li>
-                    <li>Curso de Integração contínua</li>
-                    <li>Curso de Padrões e técnicas avançadas com Git e Github</li>
+                    <li><a href="https://fullcycle.com.br/certificado/46284a14-6129-46bb-94bb-d804fb634fa3">Curso de Docker</a></li>
+                    <li><a href="https://fullcycle.com.br/certificado/6817ad56-9009-4627-9bb4-a3079c614035">Curso de Integração contínua</a></li>
+                    <li><a href="https://fullcycle.com.br/certificado/b31cbc32-faf9-41a6-b985-eec0d2263893">Curso de Padrões e técnicas avançadas com Git e Github</a></li>
+                    <li><a href="https://drive.google.com/file/d/1dxZHqoUsy7sMlx8Scjw5NHetdKhPsf8X/view?usp=share_link">Organização e Arquitetura de Computadores</a></li>
+                    <li><a href="https://drive.google.com/open?id=1BlxgRlVuEmNGb3dh5AAYHHnJEQAvZ0zs">Introdução ao Hacking e Pentest</a></li>
+                    <li><a href="https://drive.google.com/open?id=1bhW3yZeSAmGHA-rjvQ2trhjNcYjLpQXX">Curso de PHP</a></li>
+                    <li><a href="https://drive.google.com/open?id=1SI9gQLqGu_XlPGJmJ8ppnkaaGwxajpo8">Curso de HTML5</a></li>
+                    <li><a href="https://drive.google.com/open?id=1D3VrLsh2dOX261eb2ysaLNO4TJUOdypS">Curso de MySQL</a></li>
+                    <li><a href="https://drive.google.com/file/d/1s2u30tmsfVcTP9czh8jG_cwbt8Dsvlue/view?usp=drivesdk">Curso de POO Java</a></li>
+                    <li><a href="https://drive.google.com/file/d/1WUyokg-YNKrTGDCBgsthrcjmfNxx05Q9/view?usp=drivesdk">Curso de Python 3 - Fundamentos</a></li>
+                    <li><a href="https://drive.google.com/file/d/1QP5oSlCdB_2QiwAIE0iGXEpAjUdAufOi/view?usp=drivesdk">Lógica de Programação</a></li>
+                    <li><a href="https://drive.google.com/file/d/1b-T0kEE_4iqLTX_OycwzgjIhaI-Hl9NX/view?usp=drivesdk">Curso de Algoritmos</a></li>
                 </ul>
+            </div>
+
+            <h3>Projetos</h3>
+            <div class="data projects">
+                <h4>Downhill Timer</h4>
+
+                <p>Este trabalho se propõe a abordar o desenvolvimento de um software inovador dedicado ao gerenciamento de competições 
+                de downhill, com o objetivo de aprimorar a organização e otimizar a execução de eventos dessa modalidade do mountain bike.</p>
+
+                <p>O principal objetivo deste projeto é desenvolver um software que simplifique o gerenciamento de competições e forneça 
+                uma plataforma aberta para integração com sistemas embarcados, permitindo que os desenvolvedores de sistemas embarcados 
+                utilizem uma API para estender as funcionalidades do software principal.</p>
+
+                <p>A relevância deste projeto reside na sua capacidade de contribuir para a modernização do gerenciamento de provas de downhill, 
+                simplificando processos e integrando tecnologias. Ao finalizar este trabalho, espera-se que o software desenvolvido demonstre 
+                sua eficácia e que os resultados obtidos possam impactar positivamente a realização de competições dessa modalidade.</p>
+
+                <a target="_blank" href="https://ifpr.edu.br/uniao-da-vitoria/wp-content/uploads/sites/27/2024/02/TCC-IFPR-RAFAEL.pdf">TCC</a>
+                - <a target="_blank" href="https://github.com/RafaelCecchin/downhill-timer">Projeto no Github</a>
             </div>
 
         </div>
