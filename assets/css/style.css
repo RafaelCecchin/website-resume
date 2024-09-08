@@ -19,6 +19,12 @@ html {
     color: var(--black);
 }
 
+@media (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+}
+
     body {
         padding: 2rem;
         background-color: var(--white);
