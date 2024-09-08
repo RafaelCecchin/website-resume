@@ -54,6 +54,7 @@ html {
                 font-weight: 100;
                 margin-top: .3rem;
                 color: var(--light-gray);
+                white-space: nowrap;
             }
 
             .data {
@@ -110,4 +111,36 @@ html {
                 flex-direction: row;
                 gap: 1rem;
                 flex-wrap: wrap;
+            }
+
+            .projects ul {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+            }
+
+            @media (max-width: 768px) {
+                .projects ul {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0.5rem;
+                }
+            }
+
+            @media (max-width: 500px) {
+                .projects ul {
+                    grid-template-columns: 1fr;
+                    gap: 0.5rem;
+                }
+            }
+
+            .projects a {
+                width: 100%;
+                display: block;
+            }
+
+            .projects img {
+                width: 100%;
+                display: block;
+                box-shadow: 0.1rem 0.2rem 0.6rem rgba(0, 0, 0, 0.5);
             }
