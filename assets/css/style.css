@@ -119,7 +119,7 @@ html {
                 flex-wrap: wrap;
             }
 
-            .projects ul {
+            .projects-participation ul {
                 width: 100%;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -127,25 +127,25 @@ html {
             }
 
             @media (max-width: 768px) {
-                .projects ul {
+                .projects-participation ul {
                     grid-template-columns: 1fr 1fr;
                     gap: 0.5rem;
                 }
             }
 
             @media (max-width: 500px) {
-                .projects ul {
+                .projects-participation ul {
                     grid-template-columns: 1fr;
                     gap: 0.5rem;
                 }
             }
 
-            .projects a {
+            .projects-participation a {
                 width: 100%;
                 display: block;
             }
 
-            .projects img {
+            .projects-participation img {
                 width: 100%;
                 display: block;
                 box-shadow: 0.1rem 0.2rem 0.6rem rgba(0, 0, 0, 0.5);
