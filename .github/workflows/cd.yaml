@@ -1,0 +1,34 @@
+name: CD GitOps
+on:
+  push:
+    branches:
+      - feature/ci
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: feature/ci
+
+    - name: Setup builder
+      uses: docker/setup-buildx-action@v3
+
+    - name: DockerHub Login
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+    - name: Build and push image to DockerHub
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: >
+          ${{ secrets.DOCKERHUB_USERNAME }}/website-resume:${{ github.sha }},
+          ${{ secrets.DOCKERHUB_USERNAME }}/website-resume:latest
