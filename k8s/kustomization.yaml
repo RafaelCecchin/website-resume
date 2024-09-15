@@ -6,4 +6,4 @@ resources:
 images:
 - name: website-resume
   newName: rafaelcecchin/website-resume
-  newTag: newtag
+  newTag: 91c7dc2cb10c0da24d78edc590c107aa7e152685
