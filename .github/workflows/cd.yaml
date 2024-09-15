@@ -32,3 +32,28 @@ jobs:
         tags: >
           ${{ secrets.DOCKERHUB_USERNAME }}/website-resume:${{ github.sha }},
           ${{ secrets.DOCKERHUB_USERNAME }}/website-resume:latest
+
+    - name: Setup Kustomize
+      uses: imranismail/setup-kustomize@v1
+      with:
+        kustomize-version: "3.6.1"
+
+    - name: Update Kubernetes resources
+      env:
+        DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      run: |
+        cd k8s
+        kustomize edit set image website-resume=$DOCKERHUB_USERNAME/website-resume:$GITHUB_SHA
+
+    - name: Commit
+      run: |
+        git config --local user.email "contatorafaelcecchin@gmail.com"
+        git config --local user.name "RafaelCecchin"
+        git commit -am "Bump docker version"
+
+    - name: Push
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        repository: RafaelCecchin/website-resume
+        branch: feature/ci
