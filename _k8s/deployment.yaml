@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: website-resume-deployment
+  labels:
+    app: website-resume
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: website-resume
+  template:
+    metadata:
+      labels:
+        app: website-resume
+    spec:
+      containers:
+      - name: website-resume-container
+        image: website-resume
+        ports:
+        - containerPort: 80
