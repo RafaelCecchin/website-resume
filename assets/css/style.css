@@ -112,6 +112,10 @@ html {
                         line-height: 1.2;
                     }
 
+                        small {
+                            font-style: italic;
+                        }
+
             .links {
                 display: flex;
                 flex-direction: row;
