@@ -54,6 +54,13 @@ html {
             margin-top: 2rem;
         }
 
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+
             h3 {
                 font-family: var(--font-DM), serif;
                 font-style: italic;
@@ -133,13 +140,6 @@ html {
             @media (max-width: 768px) {
                 .projects-participation ul {
                     grid-template-columns: 1fr 1fr;
-                    gap: 0.5rem;
-                }
-            }
-
-            @media (max-width: 500px) {
-                .projects-participation ul {
-                    grid-template-columns: 1fr;
                     gap: 0.5rem;
                 }
             }
