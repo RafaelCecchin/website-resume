@@ -144,16 +144,41 @@ html {
                 }
             }
 
-            .projects-participation a {
+                .projects-participation a {
+                    width: 100%;
+                    display: block;
+                }
+
+                .projects-participation img {
+                    width: 100%;
+                    display: block;
+                    box-shadow: 0.1rem 0.2rem 0.6rem rgba(0, 0, 0, 0.5);
+                }
+
+            .latest-books ul {
                 width: 100%;
-                display: block;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
             }
 
-            .projects-participation img {
-                width: 100%;
-                display: block;
-                box-shadow: 0.1rem 0.2rem 0.6rem rgba(0, 0, 0, 0.5);
+            @media (max-width: 768px) {
+                .latest-books ul {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0.5rem;
+                }
             }
+
+                .latest-books a {
+                    width: 100%;
+                    display: block;
+                }
+
+                .latest-books img {
+                    width: 100%;
+                    display: block;
+                    box-shadow: 0.1rem 0.2rem 0.6rem rgba(0, 0, 0, 0.5);
+                }
 
     .fireworks {
         z-index: -1;
